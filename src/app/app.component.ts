@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'dominykasmakarovas.github.io';
   num = 0;
+
+  constructor(private titleService: Title) {
+    this.titleService.setTitle(this.title);
+  }
 
   addNum() {
     this.num++;
