@@ -11,7 +11,7 @@ export class AppComponent {
   num = 0;
 
   constructor(private titleService: Title) {
-    this.titleService.setTitle(this.title);
+    this.titleService.setTitle('Dominykas Makarovas');
   }
 
   addNum() {
